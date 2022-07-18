@@ -1,5 +1,5 @@
 const Booking = ({ booking, handleBooks }) => {
-    const date = new Date(booking.date).toLocaleDateString().toString().replaceAll('/', '.');
+    const date = new Date(booking.date).toLocaleDateString("uk-Uk").toString().replaceAll('/', '.');
 
     const handleClose = (id) => {
         handleBooks(id);
