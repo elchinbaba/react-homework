@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 import trips from '../data/trips.json';
 
-const Main = ({ setTrip }) => {
+const Main = () => {
     const [filter, setFilter] = useState({
         search: '',
         duration: '',
@@ -20,7 +20,7 @@ const Main = ({ setTrip }) => {
             <main>
                 <h1 className="visually-hidden">Travel App</h1>
                 <TripsFilter setFilter={setFilter} />
-                <Trips trips={trips} filter={filter} setTrip={setTrip} />
+                <Trips trips={trips} filter={filter} />
             </main>
             <Footer />
         </>
