@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const Nav = () => {
+    const navigate = useNavigate();
+    const routeChange = () => {
+        const signOutPath = '/sign-in';
+        navigate(signOutPath);
+    };
+
     return (
         <nav className="header__nav">
             <ul className="nav-header__list">
@@ -21,7 +28,7 @@ const Nav = () => {
                         <ul className="profile-nav__list">
                             <li className="profile-nav__item profile-nav__username">John Doe</li>
                             <li className="profile-nav__item">
-                                <button className="profile-nav__sign-out button">Sign Out</button>
+                                <button className="profile-nav__sign-out button" onClick={routeChange}>Sign Out</button>
                            </li>
                         </ul>
                     </div>
