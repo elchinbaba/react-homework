@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Trips = ({ trips, filter }) => {
+const Trips = ({ trips, filter, setTrip }) => {
     const { search, duration, level } = filter;   
     if (search) {
         trips = trips.filter(trip => {
@@ -30,6 +30,10 @@ const Trips = ({ trips, filter }) => {
         });
     }
 
+    const handleClick = (trip) => {
+        setTrip(trip);
+    };
+
     return (
         <section className="trips">
             <h2 className="visually-hidden">Trips List</h2>
@@ -50,7 +54,7 @@ const Trips = ({ trips, filter }) => {
                                 <strong className="trip-price__value">{trip.price} $</strong>
                             </div>
                         </div>
-                        <NavLink to="/trip" className="button">Discover a trip</NavLink>
+                        <NavLink to={`/trip/${trip.id}`} className="button" onClick={() => handleClick(trip)}>Discover a trip</NavLink>
                     </li>
                 ))}
             </ul>

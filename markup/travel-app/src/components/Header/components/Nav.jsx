@@ -14,7 +14,7 @@ const Nav = () => {
                 <li className="nav-header__item" title="Bookings">
                     <NavLink to='/bookings' className="nav-header__inner">
                         <span className="visually-hidden">Bookings</span>
-                        <img src="./assets/images/briefcase.svg" alt=" icon" />
+                        <img src="/assets/images/briefcase.svg" alt=" icon" />
                     </NavLink>
                     {/* <a href="./bookings.html" className="nav-header__inner">
                         <span className="visually-hidden">Bookings</span>
@@ -24,7 +24,7 @@ const Nav = () => {
                 <li className="nav-header__item" title="Profile">
                     <div className="nav-header__inner profile-nav" tabIndex="0">
                         <span className="visually-hidden">Profile</span>
-                        <img src="./assets/images/user.svg" alt="profile icon" />
+                        <img src="/assets/images/user.svg" alt="profile icon" />
                         <ul className="profile-nav__list">
                             <li className="profile-nav__item profile-nav__username">John Doe</li>
                             <li className="profile-nav__item">
