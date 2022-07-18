@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Logo = () => {
+const Logo = () => {    
     return (
         <>
             <NavLink to='/' className="header__logo">Travel App</NavLink>
